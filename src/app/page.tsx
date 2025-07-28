@@ -3,18 +3,19 @@ import Image from "next/image";
 import right_hero_image from "../../public/assest/hero_right_image.svg";
 import fame_tonic_logo from "../../public/assest/fame-tonic-logo.svg";
 import note_star_icon from "../../public/assest/note-star-icon.png";
+import hero_button from "../../public/assest/hero_button.svg";
 // import { Star, ArrowRight } from 'lucide-react';
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden relative max-w-[1440px] mx-auto">
       {/* Top Gradient Banner */}
-      <div className="w-full bg-gradient-to-r from-[#E2185F] via-purple-500 to-cyan-400 py-3">
-        <div className="max-w-[1440px] mx-auto  flex items-center justify-center">
+      <div className="w-full bg-gradient-to-r from-[#E2185F] via-purple-500 to-cyan-400 ">
+        <div className="max-w-[1440px] mx-auto  flex items-center justify-center h-[46px]">
           {/* <Star className="w-4 h-4 text-yellow-300 mr-2" /> */}
-          <span className="text-sm font-medium text-white">
-            <strong>FRESH BEGINNINGS SALE:</strong> Extra 25% OFF, Limited Spots
-            - start your journey today!
+          <span className="text-[22px]  text-white flex">
+            <strong className="text-[#00E7F9] font-extrabold">FRESH BEGINNINGS SALE: </strong>  {" "} <span className="font-bold ml-1">Extra 25% OFF, Limited Spots
+            - start your journey today!</span>
           </span>
         </div>
       </div>
@@ -32,15 +33,15 @@ export default function Home() {
         {/* Main Content */}
         <div className="relative z-10 max-w-[1440px] mx-auto ">
           {/* Header */}
-          <header className="flex items-center justify-between h-[74px] pt-[35px] ">
-            <div className=" pt-8">
+          <header className="flex  justify-between h-[74px] mt-[35px] ">
+            <div className=" ">
               <Image
                 src={fame_tonic_logo}
                 alt="Fame Tonic Logo"
                 className="w-[173.12px] h-[74px]"
               />
             </div>
-            <nav className="flex space-x-10">
+            <nav className="flex space-x-10 text-[18px] font-semibold">
               <a
                 href="#"
                 className="text-gray-300 hover:text-white transition-colors"
@@ -57,10 +58,10 @@ export default function Home() {
           </header>
 
           {/* Main Content Grid */}
-          <div className="flex justify-between items-center w-full pt-[57px]">
+          <div className="flex justify-between items-center w-full mt-[57px]">
             {/* Left Content */}
-            <div className="space-y-8 relative z-10 max-w-xl">
-              <div className="space-y-4">
+            <div className="space-y-8 relative z-10 max-w-xl mt-[30px]">
+              <div className="">
                 <h2 className="text-5xl font-bold leading-tight font-Urbanist text-[35px] text-[#FFFFFF]">
                   Want to Turn Social Media Into a{" "}
                   <span className="text-white">Profitable Career?</span>
@@ -94,23 +95,23 @@ export default function Home() {
               </div>
 
               {/* CTA Button */}
-              <div className="space-y-3">
-                <button className="bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 text-white font-bold py-4 px-12 rounded-full text-xl transition-all duration-300 flex items-center space-x-2 shadow-lg hover:shadow-xl">
-                  <span>GET STARTED</span>
+              <div className="">
+                <button className="cursor-pointer">
+                  <Image src={hero_button} alt="alt"  className=""/>
                   {/* <ArrowRight className="w-5 h-5" /> */}
                 </button>
-                <p className="text-sm text-gray-400">
+                <p className="text-sm text-[#FFFFFF] ml-[9.5%] -translate-y-2 text-[12px]">
                   1-minute quiz for personalized insights
                 </p>
               </div>
 
               {/* Footer Text */}
-              <div className="space-y-2 text-xs text-gray-500">
-                <p>
+              <div className="space-y-2  -translate-y-2">
+                <p className="text-[#ABABAB] text-[12px] font-medium">
                   By clicking "Get Started", you agree with Terms and
-                  Conditions, Privacy Policy, Subscription Terms
+                  Conditions, Privacy Policy, Subscription<br/> Terms
                 </p>
-                <p>Fametonic 2025 ©All Rights Reserved.</p>
+                <p className="text-[10px] font-medium text-[#ABABAB] mt-2">Fametonic 2025 ©All Rights Reserved.</p>
               </div>
             </div>
           </div>
