@@ -10,10 +10,10 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden relative max-w-[1440px] mx-auto">
       {/* Top Gradient Banner */}
-      <div className="w-full bg-gradient-to-r from-[#E2185F] via-purple-500 to-cyan-400 px-[279px]">
-        <div className="max-w-[1440px] mx-auto  flex items-center justify-center h-[46px]">
+      <div className="w-full bg-gradient-to-r from-[#E2185F] via-purple-500 to-cyan-400 md:px-[279px]">
+        <div className="md:max-w-[1440px] mx-auto  md:flex items-center justify-center md:h-[46px] h-[59px]">
           {/* <Star className="w-4 h-4 text-yellow-300 mr-2" /> */}
-          <span className="text-[22px]  text-white flex">
+          <span className="md:text-[22px] text-[14px] text-white md:flex">
             <strong className="text-[#00E7F9] font-extrabold font-figtree">FRESH BEGINNINGS SALE: </strong>  {" "} <span className="font-figtree font-bold ml-1">Extra 25% OFF, Limited Spots
             - start your journey today!</span>
           </span>
@@ -22,18 +22,27 @@ export default function Home() {
 
       <div className="">
         {/* Background Image Positioned to the Right */}
-        <div className="absolute right-[99px] top-[126px] z-0  pointer-events-none pt-[9px] ">
+        <div className="absolute md:right-[99px] md:top-[126px] z-0  pointer-events-none md:pt-[9px] pt-[40px] md:px-0 px-10">
           <Image
             src={right_hero_image}
             alt="Hero Right Background"
-            className="w-[666px] h-[679px] object-contain"
+            className="md:w-[666px] md:h-[679px] h-[426px] w-[390px] object-contain"
           />
         </div>
+
+        {/* Mobile Logo */}
+          <div className="md:hidden flex justify-center mt-[33px]">
+              <Image
+                src={fame_tonic_logo}
+                alt="Fame Tonic Logo"
+                className="w-[107.78px] h-[46.07px]"
+              />
+            </div>
 
         {/* Main Content */}
         <div className="relative z-10 max-w-[1440px] mx-auto ">
           {/* Header */}
-          <header className="flex  justify-between h-[74px] mt-[35px] px-[211px]">
+          <header className="md:flex hidden justify-between md:h-[74px] md:mt-[35px] md:px-[211px]">
             <div className=" ">
               <Image
                 src={fame_tonic_logo}
@@ -41,7 +50,7 @@ export default function Home() {
                 className="w-[173.12px] h-[74px]"
               />
             </div>
-            <nav className="flex space-x-10 text-[18px] font-semibold font-figtree">
+            <nav className="md:flex hidden space-x-10 text-[18px] font-semibold font-figtree">
               <a
                 href="#"
                 className="text-gray-300 hover:text-white transition-colors"
@@ -58,21 +67,21 @@ export default function Home() {
           </header>
 
           {/* Main Content Grid */}
-          <div className="flex justify-between items-center w-full mt-[30px]  px-[215px]">
+          <div className="md:flex justify-between items-center w-full md:mt-[30px] mt-[359px] md:px-[215px]">
             {/* Left Content */}
             <div className=" relative z-10 max-w-xl mt-[30px]">
-              <div className="">
-                <h2 className="text-5xl font-bold leading-tight font-urbanist text-[35px] text-[#FFFFFF]">
+              <div className="md:text-start text-center md:px-0 px-[20px]">
+                <h2 className="font-bold leading-tight font-urbanist md:text-[35px] text-[25px] text-[#FFFFFF]">
                   Want to Turn Social Media Into a{" "}
                   <span className="text-white">Profitable Career?</span>
                 </h2>
-                <h3 className="text-3xl font-bold text-cyan-400 text-[35px] font-urbanist">
+                <h3 className=" font-bold text-cyan-400 md:text-[35px]/[42px] text-[25px] font-urbanist">
                   Discover your way to success<br/> with Fametonic:
                 </h3>
               </div>
 
               {/* Feature List */}
-              <div className="space-y-[13px] mt-[16px]">
+              <div className="md:space-y-[13px] space-y-[10px] md:mt-[16px] mt-[22px] md:px-0 px-[20px]">
                 {[
                   "Start growing your influence right away—no waiting required!",
                   "Create viral TikToks and Reels step by step with easy-to-follow\nlessons",
@@ -94,6 +103,16 @@ export default function Home() {
                 ))}
               </div>
 
+              {/* Mobile Footer Text */}
+              <div className="mt-[22px] md:hidden block">
+                <p className="text-[#ABABAB] text-[12px] font-medium font-figtree">
+                  By clicking "Get Started", you agree with Terms and
+                  Conditions, Privacy Policy, Subscription<br/> Terms
+                </p>
+                <p className="text-[10px] font-medium text-[#ABABAB] mt-[12px] font-figtree">Fametonic 2025 ©All Rights Reserved.</p>
+              </div>
+
+
               {/* CTA Button */}
               <div className="mt-[25px]">
                 <button className="cursor-pointer">
@@ -105,8 +124,8 @@ export default function Home() {
                 </p>
               </div>
 
-              {/* Footer Text */}
-              <div className="mt-[22px]">
+              {/*desktop Footer Text */}
+              <div className="mt-[22px] md:block hidden">
                 <p className="text-[#ABABAB] text-[12px] font-medium font-figtree">
                   By clicking "Get Started", you agree with Terms and
                   Conditions, Privacy Policy, Subscription<br/> Terms
