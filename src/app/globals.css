@@ -48,7 +48,7 @@ body {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #000000;
     --foreground: #ededed;
   }
 }
@@ -66,4 +66,18 @@ body {
 
 .font-figtree {
   font-family: var(--font-figtree);
+}
+
+
+.testing_text{
+  text-shadow: 2px 2px 0 #FC004E, 4px 4px 10px #FC004E;
+}
+
+
+.bg-custom-pink {
+  background-color: #FC004E;
+}
+
+.bg-gradient-fc-to-cb {
+  background-image: linear-gradient(to right, #FC004E, #10CBE0);
 }
