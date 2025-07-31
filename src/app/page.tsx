@@ -21,7 +21,7 @@ export default function Home() {
             - start your journey today!</span>
           </span>
           {/* mobile text */}
-           <div className=" text-white md:hidden flex justify-center items-center">
+           <div className=" text-white md:hidden flex justify-center items-center pt-[20px]">
             <h1 className="text-[#00E7F9] text-[16px] font-extrabold font-figtree">
               <span>
                 <Image
@@ -121,7 +121,7 @@ export default function Home() {
                       <Image
                         src={note_star_icon}
                         alt="Note Star Icon"
-                        className="w-6 h-6"  
+                        className="w-[22px] h-[22px]"  
                       />
                     </div>
                     <p className="text-[16px] font-semibold font-figtree text-[#FFFFFF] whitespace-pre-line">
