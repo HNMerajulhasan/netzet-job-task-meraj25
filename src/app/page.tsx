@@ -1,21 +1,18 @@
 "use client";
 import Image from "next/image";
-import right_hero_image from "../../public/assest/hero_right_image.svg";
-import fame_tonic_logo from "../../public/assest/fame-tonic-logo.svg";
-import note_star_icon from "../../public/assest/note-star-icon.png";
-import hero_button from "../../public/assest/hero_button.svg";
-import burger_menu from "../../public/assest/burger_menu.svg";
-import rocket from "../../public/assest/rocket-removebg.png";
-import button_right from "../../public/assest/arrow_right.svg";
+import right_hero_image from "../../public/assets/mobile_device_hero_img.svg";
+import fame_tonic_logo from "../../public/assets/fame-tonic-logo.svg";
+import note_star_icon from "../../public/assets/note-star-icon.png";
+import burger_menu from "../../public/assets/burger_menu.svg";
+import rocket from "../../public/assets/rocket-removebg.png";
+import button_right from "../../public/assets/arrow_right.svg";
 
-// import { Star, ArrowRight } from 'lucide-react';
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden relative  mx-auto">
       {/* Top Gradient Banner */}
-      <div className="w-full bg-gradient-fc-to-cb z-10 md:px-[279px] bg-custom-pink h-[46px] pt-[6px]">
-        {/* <Star className="w-4 h-4 text-yellow-300 mr-2" /> */}
+      <div className="w-full bg-gradient-fc-to-cb z-10 nav-container bg-custom-pink md:h-[46px] h-[59px] pt-[6px]">
         <div className="md:text-[22px] text-[14px] text-white md:flex justify-center items-center hidden ">
           <span>
             <Image
@@ -33,7 +30,7 @@ export default function Home() {
         </div>
 
         {/* mobile text */}
-        <div className=" text-white md:hidden flex justify-center items-center pt-[20px]">
+        <div className=" text-white md:hidden flex justify-center items-center py-[12px]">
           <h1 className="text-[#00E7F9] text-[16px] font-extrabold font-figtree">
             <span>
               <Image
@@ -48,13 +45,14 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="max-w-[1440px] mx-auto relative">
+     {/* Full Hero section  */}
+      <div className="container mx-auto relative ">
         {/* Background Image Positioned to the Right */}
-        <div className="absolute md:right-[99px] md:top-[50px] z-0  pointer-events-none md:pt-[9px] pt-[15px] md:px-0 px-10">
+        <div className="absolute md:right-[99px] md:top-[50px] top-[47px] z-0  pointer-events-none md:pt-[9px] pt-[15px] md:px-0 px-10">
           <Image
             src={right_hero_image}
             alt="Hero Right Background"
-            className="md:w-[666px] md:h-[679px] h-[426px] w-[390px] object-contain"
+            className="md:w-[666px] md:h-[679px]  object-contain"
           />
         </div>
 
@@ -79,9 +77,9 @@ export default function Home() {
         </div>
 
         {/* Main Content */}
-        <div className="relative z-10 max-w-[1440px] mx-auto ">
+        <div className="relative z-10  mx-auto ">
           {/* Header */}
-          <header className="md:flex hidden justify-between md:h-[74px] md:mt-[35px] md:px-[211px]">
+          <header className="md:flex hidden justify-between md:h-[74px] md:mt-[35px] ">
             <div className=" ">
               <Image
                 src={fame_tonic_logo}
@@ -105,34 +103,28 @@ export default function Home() {
             </nav>
           </header>
 
-          {/* Main Content Grid */}
-          <div className="md:flex justify-between items-center w-full md:mt-[30px] mt-[359px] md:px-[215px]">
-            {/* Left Content */}
+        {/* Left Content section*/}
+          <div className="md:flex justify-between items-center w-full md:mt-[30px] mt-[359px]">
             <div className=" relative z-10 max-w-xl mt-[30px]">
               <div className="md:text-start text-center md:px-0 px-[20px]">
-                <h2 className="font-bold leading-tight font-urbanist md:text-[35px] text-[25px] text-[#FFFFFF]">
+                <h2 className="md:px-[0px] px-[20px] font-bold leading-tight font-urbanist md:text-[35px] text-[25px] text-[#FFFFFF] md:-translate-y-0 -translate-y-5">
                   Want to Turn Social Media Into a{" "}
                   <span className="text-white">Profitable Career?</span>
                 </h2>
-                {/* <h3 className=" font-bold text-cyan-400 md:text-[35px]/[42px] text-[25px] font-urbanist">
-                  Discover your way to success<br/> with Fametonic:
-                </h3> */}
                 <div className="md:text-start text-center md:px-0 px-[20px]">
-                  {/* <h2 className="font-bold leading-tight font-urbanist md:text-[35px] text-[25px] text-[#FFFFFF]">
-                                    Want to Turn Social Media Into a
-                                    
-                                    <span className="text-white">Profitable Career?</span>
-                                </h2> */}
-                  <h3 className="testing_text font-bold text-cyan-400 md:text-[35px]/[42px] text-[25px] font-urbanist">
+                  <h3 className="shadow_text_effect md:block hidden font-bold text-cyan-400 md:text-[35px]/[42px] text-[25px] font-urbanist md:-translate-y-0 -translate-y-5">
                     Discover your way to success
                     <br />
                     with Fametonic:
+                  </h3>
+                  <h3 className="px-[20px] shadow_text_effect md:hidden block font-bold text-cyan-400 md:text-[35px]/[42px] text-[25px] font-urbanist md:-translate-y-0 -translate-y-5">
+                    Discover your way to success with Fametonic:
                   </h3>
                 </div>
               </div>
 
               {/* Feature List */}
-              <div className="md:space-y-[13px] space-y-[10px] md:mt-[16px] mt-[22px] md:px-0 px-[20px]">
+              <div className="md:space-y-[13px] space-y-[10px] md:mt-[16px] mt-[22px] md:px-0 px-[20px] md:-translate-y-0 -translate-y-4">
                 {[
                   "Start growing your influence right away—no waiting required!",
                   "Create viral TikToks and Reels step by step with easy-to-follow\nlessons",
@@ -155,42 +147,22 @@ export default function Home() {
               </div>
 
               {/* Mobile Footer Text */}
-              <div className="mt-[22px] md:hidden block">
-                <p className="text-[#ABABAB] text-[12px] font-medium font-figtree text-center px-[54.5px]">
+              <div className="mt-[22px] md:hidden block ">
+                <p className="text-[#ABABAB] text-[12px] font-medium font-figtree text-center px-[54.5px] md:-translate-y-0 -translate-y-4">
                   By clicking "Get Started", you agree with Terms and
                   Conditions, Privacy Policy, Subscription Terms
                 </p>
-                <p className="text-[10px] text-center font-medium text-[#ABABAB] mt-[19px] font-figtree">
+                <p className="text-[10px] text-center font-medium text-[#ABABAB] mt-[19px] font-figtree md:-translate-y-0 -translate-y-4">
                   Fametonic 2025 ©All Rights Reserved.
                 </p>
               </div>
 
-              {/* CTA Button */}
-              <div className="mt-[18px]">
-                {/* <button className="cursor-pointer">
-                  <Image src={hero_button} alt="alt"  className="md:w-[313px] w-[350px] h-[60px]"/>
-                </button> */}
-
+              {/* GET STARTED Button */}
+              <div className="md:mt-[18px] md:pb-0 pb-[40px] md:block flex flex-col items-center justify-center md:-translate-y-0 -translate-y-3">
                 <button
-                  className=" font-figtree font-bold 
-            text-[20px] leading-[100%] 
-            tracking-normal align-middle
-  inline-flex items-center justify-center
-  w-full md:w-[300px]
-   h-[40px]
-  px-10 py-2
-  bg-[#FC004E] 
-  text-white
-  rounded-[10px]
-  shadow-[2px_2px_10px_0px_#00E7F9]
-  hover:bg-[#e6003d] 
-  active:bg-[#cc0036]
-  focus:outline-none
-  disabled:opacity-50 disabled:cursor-not-allowed
-  transition-all duration-200 ease-in-out
-  mt-8 md:mt-[14px]
-"
-                >
+                  className="font-figtree font-bold  text-[20px] leading-[100%] tracking-normal align-middle inline-flex items-center justify-center w-[350px] mx-auto md:w-[313px]
+                  h-[40px] md:px-0 px-[20px] bg-[#FC004E]  text-white rounded-[10px] shadow-[2px_2px_10px_0px_#00E7F9] hover:bg-[#e6003d] active:bg-[#cc0036] focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 ease-in-out mt-8 md:mt-[14px]"
+                  >
                   GET STARTED
                   <span className="ml-2">
                     <Image

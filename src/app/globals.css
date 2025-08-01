@@ -1,32 +1,3 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap');
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --font-sans: 'Urbanist', sans-serif;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans);
-} */
-
 /* global.css */
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&family=Figtree:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
@@ -45,6 +16,11 @@ body {
   --font-sans: var(--font-sans);
   --font-mono: var(--font-geist-mono);
 }
+
+.container {
+  @apply xl:max-w-[1440px];
+}
+
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -68,11 +44,9 @@ body {
   font-family: var(--font-figtree);
 }
 
-
-.testing_text{
+.shadow_text_effect{
   text-shadow: 2px 2px 0 #FC004E, 4px 4px 10px #FC004E;
 }
-
 
 .bg-custom-pink {
   background-color: #FC004E;
@@ -80,4 +54,32 @@ body {
 
 .bg-gradient-fc-to-cb {
   background-image: linear-gradient(to right, #FC004E, #10CBE0);
+}
+
+.container {
+  margin-inline: auto;
+}
+
+@media (min-width: 1080px) {
+  .container {
+    max-width: 1240px;
+    padding-inline: 15px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+    padding-inline: 215px;
+    
+  }
+}
+
+.nav-container {
+  margin-inline: auto;
+}
+@media (min-width: 1440px) {
+  .nav-container {
+    padding-inline: 279px; 
+  }
 }
